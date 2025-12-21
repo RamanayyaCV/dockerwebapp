@@ -4,12 +4,12 @@ services:
  devopsdb:
    container_name: devopsdb
    # image: shaikmustafa/valluri:dbimage
-   image: ./Docker-db
+   build: ./Docker-db
    ports:
      - "3306:3306"
 
  application:
-   image: ./Docker-app
+   build: ./Docker-app
    #image: shaikmustafa/valluri:appimage
    container_name: containerapp
    ports:
